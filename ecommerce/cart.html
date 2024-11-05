@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart - Frèsli Juice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-family: 'Arial', sans-serif;
+        }
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- Navbar -->
+<li><a href="cart.html">Cart <span class="cart-counter" id="cart-counter">0</span></a></li>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Frèsli Juice</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="cart.html">Cart <span class="cart-counter" id="cart-counter">0</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Cart Items Section -->
+<div class="container" id="cart-items">
+    <h2>Your Cart</h2>
+    <!-- Sản phẩm sẽ được thêm vào đây -->
+</div>
+
+
+<!-- Total Amount -->
+<div class="container text-right">
+    <h3 id="total-amount">Total: $0.00</h3>
+</div>
+
+
+<!-- Bootstrap and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- JavaScript for Cart Functionality -->
+<script>
+    $(document).ready(function () {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let totalAmount = 0;
+
+
+        // Hiển thị sản phẩm trong giỏ hàng
+        if (cartItems.length > 0) {
+            cartItems.forEach(item => {
+                totalAmount += item.price * item.quantity; // Tính tổng tiền
+                $('#cart-items').append(`
+                    <div class="cart-item">
+                        <h4>${item.name}</h4>
+                        <p>Price: $${item.price} x ${item.quantity} = $${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
+                `);
+            });
+        } else {
+            $('#cart-items').append('<p>Your cart is empty.</p>');
+        }
+
+
+        // Hiển thị tổng tiền
+        $('#total-amount').text(`Total: $${totalAmount.toFixed(2)}`);
+    });
+</script>
+
+
+
+
+</body>
+</html>

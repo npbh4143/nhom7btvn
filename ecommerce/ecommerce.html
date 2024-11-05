@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frèsli Juice - Detox & Fresh</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar-default {
+            background-color: #4caf50;
+            border-color: #4caf50;
+        }
+        .navbar-default .navbar-brand,
+        .navbar-default .navbar-nav > li > a {
+            color: #ffffff;
+        }
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #a5d6a7;
+        }
+        .cover-image {
+            width: 100%;
+            filter: brightness(100%);
+            display: block;
+        }
+        .thumbnail {
+            border: none;
+            transition: transform 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        .badge-discount {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff7043;
+            color: white;
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .list-group-item {
+            background-color: #a5d6a7;
+            color: #1b5e20;
+        }
+        .btn-success {
+            background-color: #66bb6a;
+            border-color: #66bb6a;
+            transition: background-color 0.3s ease;
+        }
+        .btn-success:hover {
+            background-color: #338a3e;
+        }
+        .badge {
+            background-color: #4caf50;
+        }
+        .form-control, .btn {
+            border-radius: 20px;
+        }
+        .cart-counter {
+            background-color: #ff7043;
+            color: white;
+            border-radius: 50%;
+            padding: 3px 7px;
+            font-size: 14px;
+            position: relative;
+            top: -10px;
+            left: -5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- Navbar -->
+<li><a href="cart.html">Cart <span class="cart-counter" id="cart-counter">0</span></a></li>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="https://github.com/antoncarte/Cau555/blob/main/S%E1%BA%A3n%20ph%E1%BA%A9m/AVT%20T%E1%BB%90I.png?raw=true"
+                     alt="Frèsli Juice Logo" style="height: 30px; display: inline-block; vertical-align: middle;">
+                Frèsli Juice
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span class="cart-counter" id="cart-counter">0</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="glyphicon glyphicon-user"></i> Account</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Static Cover Image -->
+<div class="container-fluid">
+    <img src="https://github.com/antoncarte/Cau555/blob/main/S%E1%BA%A3n%20ph%E1%BA%A9m/cover.png?raw=true"
+         alt="Frèsli Juice Cover" class="cover-image">
+</div>
+
+
+<!-- Product Section -->
+<div class="container" id="products">
+    <h2 class="text-center">Our Featured Products</h2>
+    <div class="row">
+        <!-- Celery Juice Product -->
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <span class="badge-discount">20% OFF</span>
+                <img src="https://github.com/antoncarte/Cau555/blob/main/S%E1%BA%A3n%20ph%E1%BA%A9m/celery-juice.png?raw=true" alt="Celery Juice">
+                <div class="caption text-center">
+                    <h4><s>$24.99</s> $19.99</h4>
+                    <h4><a href="product.html">Celery Detox Juice</a></h4>
+                    <p>A refreshing detox juice made from fresh celery.</p>
+
+
+                    <!-- Stock Progress Bar -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" style="width: 75%;">
+                            75% Stock Left
+                        </div>
+                    </div>
+                   
+                    <button class="btn btn-success add-to-cart" data-name="Celery Detox Juice">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Orange Boost Product -->
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <span class="badge-discount">15% OFF</span>
+                <img src="https://github.com/antoncarte/Cau555/blob/main/S%E1%BA%A3n%20ph%E1%BA%A9m/chai%20cam.png?raw=true" alt="Orange Juice">
+                <div class="caption text-center">
+                    <h4><s>$19.99</s> $16.99</h4>
+                    <h4><a href="product.html">Orange Boost</a></h4>
+                    <p>Vitamin-packed orange juice for a quick refresh.</p>
+
+
+                    <!-- Stock Progress Bar -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 50%;">
+                            50% Stock Left
+                        </div>
+                    </div>
+                   
+                    <button class="btn btn-success add-to-cart" data-name="Orange Boost">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Kale Energy Product -->
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <span class="badge-discount">10% OFF</span>
+                <img src="https://github.com/antoncarte/Cau555/blob/main/S%E1%BA%A3n%20ph%E1%BA%A9m/kale.png?raw=true" alt="Kale Juice">
+                <div class="caption text-center">
+                    <h4><s>$22.99</s> $20.69</h4>
+                    <h4><a href="product.html">Kale Energy</a></h4>
+                    <p>Rich in nutrients and perfect for an energy boost.</p>
+
+
+                    <!-- Stock Progress Bar -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 25%;">
+                            25% Stock Left
+                        </div>
+                    </div>
+                   
+                    <button class="btn btn-success add-to-cart" data-name="Kale Energy">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sections for About Us and Contact -->
+<div id="about" class="container text-center" style="padding: 50px 0;">
+    <h2>About Us</h2>
+    <p>Frèsli Juice is dedicated to bringing you the freshest and healthiest juice options.</p>
+</div>
+
+
+<div id="contact" class="container text-center" style="padding: 50px 0;">
+    <h2>Contact</h2>
+    <p>Email us at <a href="mailto:support@fresli.com">support@fresli.com</a> or call (555) 123-4567</p>
+</div>
+
+
+<!-- Bootstrap and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- JavaScript for Cart Functionality -->
+<script>
+    let cartCount = 0;
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+
+    $(document).ready(function () {
+        // Update cart count on load
+        cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+        $("#cart-counter").text(cartCount);
+
+
+        $(".add-to-cart").click(function () {
+            let itemName = $(this).data("name");
+            let itemPrice = parseFloat($(this).closest('.caption').find('h4').text().replace(/\$|,/g, '').trim());
+           
+            // Check if item is already in the cart
+            let existingItem = cartItems.find(item => item.name === itemName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cartItems.push({ name: itemName, price: itemPrice, quantity: 1 });
+            }
+           
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+           
+            cartCount++;
+            $("#cart-counter").text(cartCount);
+            alert(itemName + " has been added to your cart.");
+        });
+
+
+        $("nav a").click(function (event) {
+            event.preventDefault();
+            let target = $(this).attr("href");
+            $("html, body").animate({ scrollTop: $(target).offset().top }, 1000);
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
